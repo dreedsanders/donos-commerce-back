@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
     belongs_to :user 
-    has_one :buyer
-    has_one :seller 
-    has_one :transaction
+    has_one :transfer
+    has_one :buyer, through: :transfer
+    has_one :seller, through: :transfer
 end

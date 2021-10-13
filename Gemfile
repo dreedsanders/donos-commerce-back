@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'rack-cors'
-gem "jwt", "~> 2.1"
+# gem "jwt", "~> 2.1"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 
@@ -35,7 +35,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do

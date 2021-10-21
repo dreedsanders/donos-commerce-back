@@ -3,4 +3,6 @@ class Item < ApplicationRecord
     has_one :transfer
     has_one :buyer, through: :transfer
     has_one :seller, through: :transfer
+
+
 end

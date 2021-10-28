@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :deals
 
   post '/login', to: 'users#login'
+  post '/transactions', to: 'users#transactions'
 end

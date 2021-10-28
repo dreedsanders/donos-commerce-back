@@ -7,10 +7,8 @@ class UsersController < ApplicationController
     end
     
     def create
-        # binding.pry
         user = User.create(user_params)
         puts "did it save?"
-        # user.save
         puts user.save
         render json: user
     end 
@@ -19,6 +17,14 @@ class UsersController < ApplicationController
         user = User.find_by(name: user_params[:name])
         render json: user
     end
+
+    def transactions
+         user = User.find_by(name: user_params[:name])
+         render json: user.myTransfers
+    end
+
+
+
 
 
     private 

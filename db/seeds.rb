@@ -9,6 +9,8 @@
 User.destroy_all
 Item.destroy_all
 Transfer.destroy_all
+Cart.destroy_all
+Wishlist.destroy_all
 
 u1 = User.create(name: "Test", password: "test", account_balance: 100000000.25)
 u2 = User.create(name: "God", password: "trinity", account_balance: 0)
@@ -44,5 +46,29 @@ t2=Transfer.create(buyer_id: u1.id, seller_id: u2.id, item_id: i3.id, amount: 22
 t3=Transfer.create(buyer_id: u2.id, seller_id: u1.id, item_id: i2.id, amount: 21.00)
 t4=Transfer.create(buyer_id: u2.id, seller_id: u1.id, item_id: i1.id, amount: 20.00)
 
-# still need ADS
-# still need deals
+c1 = Cart.create(user_id: u1.id, item_id: i1.id)
+c2 = Cart.create(user_id: u1.id, item_id: i1.id)
+c3 = Cart.create(user_id: u1.id, item_id: i1.id)
+c4 = Cart.create(user_id: u1.id, item_id: i1.id)
+c5 = Cart.create(user_id: u2.id, item_id: i2.id)
+c6 = Cart.create(user_id: u2.id, item_id: i2.id)
+c7 = Cart.create(user_id: u2.id, item_id: i2.id)
+c8 = Cart.create(user_id: u2.id, item_id: i2.id)
+c9 = Cart.create(user_id: u3.id, item_id: i3.id)
+c10 = Cart.create(user_id: u3.id, item_id: i3.id)
+c11 = Cart.create(user_id: u3.id, item_id: i3.id)
+c12 = Cart.create(user_id: u3.id, item_id: i3.id)
+
+w1 = Wishlist.create(user_id: u1.id, item_id: i1.id)
+w2 = Wishlist.create(user_id: u1.id, item_id: i1.id)
+w3 = Wishlist.create(user_id: u1.id, item_id: i1.id)
+w4 = Wishlist.create(user_id: u1.id, item_id: i1.id)
+w5 = Wishlist.create(user_id: u2.id, item_id: i2.id)
+w6 = Wishlist.create(user_id: u2.id, item_id: i2.id)
+w7 = Wishlist.create(user_id: u2.id, item_id: i2.id)
+w8 = Wishlist.create(user_id: u2.id, item_id: i2.id)
+w9 = Wishlist.create(user_id: u3.id, item_id: i3.id)
+w10 = Wishlist.create(user_id: u3.id, item_id: i3.id)
+w11 = Wishlist.create(user_id: u3.id, item_id: i3.id)
+w12 = Wishlist.create(user_id: u3.id, item_id: i3.id)
+
